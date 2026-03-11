@@ -1,0 +1,1295 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kamedis Calm Eczema Therapy Cream</title>
+  <style>
+    :root{
+      --bg:#f7f8fb;
+      --surface:#ffffff;
+      --line:#e6e9f0;
+      --text:#122033;
+      --muted:#5f6f85;
+      --blue:#a9c2e7;
+      --blue-2:#dfeaf8;
+      --navy:#101820;
+      --shadow:0 20px 45px rgba(16,24,32,.08);
+      --radius:26px;
+      --max:1280px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:linear-gradient(180deg,#fbfcfe 0%, #f4f7fb 100%);
+    }
+
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(16px);
+      background:rgba(251,252,254,.84);
+      border-bottom:1px solid rgba(230,233,240,.7);
+    }
+    .site-header .container{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:18px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .brand img{
+      height:34px;
+      width:auto;
+      object-fit:contain;
+      object-position:left center;
+    }
+
+    .nav{
+      display:flex;
+      gap:28px;
+      color:var(--muted);
+      font-size:14px;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+    .nav a:hover{color:var(--navy)}
+
+    .hero-wrap{padding:34px 0 22px}
+
+    .product-grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1.08fr) minmax(360px,.92fr);
+      gap:34px;
+      align-items:start;
+    }
+
+    .gallery-col{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:18px;
+      align-items:start;
+    }
+
+    .gallery-main{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    .panel{
+      background:var(--surface);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    /* Reference gallery style */
+    .reference-gallery-wrap{
+      padding:0;
+      background:#fff;
+    }
+
+    .reference-gallery{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:6px;
+      background:#fff;
+    }
+
+    .g-card{
+      background:#f2f3f5;
+      overflow:hidden;
+      position:relative;
+      min-height:250px;
+    }
+
+    .g-card.g-wide-top{
+      grid-column:1 / -1;
+      min-height:210px;
+    }
+
+    .g-card.g-wide-bottom{
+      grid-column:1 / -1;
+      min-height:340px;
+    }
+
+    .g-card img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+      background:#f2f3f5;
+    }
+
+    .strip-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .strip-card{
+      background:#f3f6fb;
+      min-height:260px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px;
+    }
+
+    .strip-card img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+      background:#f3f6fb;
+    }
+
+    .product-info{
+      position:sticky;
+      top:92px;
+      padding:28px;
+      background:rgba(255,255,255,.94);
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      color:var(--navy);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      margin-bottom:16px;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:36px;
+      height:2px;
+      background:linear-gradient(90deg,var(--blue), transparent);
+    }
+
+    h1{
+      margin:0 0 14px;
+      font-size:clamp(34px,4vw,52px);
+      line-height:1.02;
+      letter-spacing:-.03em;
+    }
+
+    .subtitle{
+      font-size:18px;
+      line-height:1.65;
+      color:var(--muted);
+      margin:0 0 20px;
+    }
+
+    .meta-bar{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin:0 0 20px;
+    }
+
+    .meta-chip{
+      background:linear-gradient(180deg,#fff,#f7f9fd);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:14px 16px;
+    }
+
+    .meta-chip b{
+      display:block;
+      margin-bottom:4px;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:var(--navy);
+    }
+
+    .meta-chip span{
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    .icon-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:12px;
+      margin:0 0 22px;
+    }
+
+    .icon-card{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:14px;
+      border:1px solid var(--line);
+      border-radius:18px;
+      background:#fbfcfe;
+    }
+
+    .icon-dot{
+      flex:0 0 42px;
+      height:42px;
+      border-radius:14px;
+      background:linear-gradient(180deg,var(--blue-2),#fff);
+      border:1px solid var(--line);
+      display:grid;
+      place-items:center;
+      color:var(--navy);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .icon-card b{
+      display:block;
+      margin-bottom:3px;
+      font-size:13px;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .icon-card span{
+      font-size:14px;
+      color:var(--muted);
+      line-height:1.45;
+    }
+
+    .cta-row{
+      display:flex;
+      gap:14px;
+      margin:6px 0 28px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:0 24px;
+      border-radius:999px;
+      border:1px solid transparent;
+      font-weight:700;
+      transition:.25s ease;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--navy),#1a2b42);
+      color:#fff;
+      box-shadow:0 14px 28px rgba(16,24,32,.16);
+    }
+    .btn-primary:hover{transform:translateY(-2px)}
+
+    .btn-secondary{
+      background:#fff;
+      border-color:var(--line);
+      color:var(--navy);
+    }
+    .btn-secondary:hover{border-color:var(--blue)}
+
+    .accordion{border-top:1px solid var(--line)}
+    .acc-item{border-bottom:1px solid var(--line)}
+
+    .acc-trigger{
+      width:100%;
+      padding:20px 0;
+      background:none;
+      border:0;
+      font:inherit;
+      cursor:pointer;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      text-align:left;
+      color:var(--navy);
+      font-size:18px;
+      letter-spacing:.02em;
+    }
+
+    .acc-trigger span:last-child{
+      font-size:28px;
+      line-height:1;
+      color:var(--muted);
+      transition:.25s ease;
+    }
+
+    .acc-item.open .acc-trigger span:last-child{transform:rotate(45deg)}
+
+    .acc-panel{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .35s ease;
+    }
+
+    .acc-inner{
+      padding:0 0 20px;
+      color:var(--muted);
+      line-height:1.75;
+      font-size:16px;
+    }
+
+    .acc-inner ul{
+      margin:12px 0 0 18px;
+      padding:0;
+    }
+    .acc-inner li{margin:8px 0}
+
+    .section{padding:40px 0}
+
+    .section-title{
+      font-size:clamp(28px,3vw,42px);
+      margin:0 0 10px;
+      letter-spacing:-.03em;
+    }
+
+    .section-sub{
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.7;
+      margin:0 0 26px;
+    }
+
+    .hero-copy{
+      max-width:760px;
+      margin:0 0 18px;
+    }
+
+    .full-banner{
+      position:relative;
+      border-radius:34px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      background:#eef3fa;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:360px;
+      padding:12px;
+    }
+
+    .full-banner img{
+      width:100%;
+      height:auto;
+      max-height:620px;
+      object-fit:contain;
+      object-position:center;
+    }
+
+    .benefit-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .benefit-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .benefit-card .media{
+      aspect-ratio:1.1/1;
+      background:linear-gradient(180deg,#f2f6fc,#fff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px;
+    }
+
+    .benefit-card .media img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+    }
+
+    .benefit-copy{
+      padding:22px 22px 24px;
+      text-align:center;
+    }
+
+    .benefit-copy h3{
+      margin:0 0 8px;
+      font-size:28px;
+      letter-spacing:-.03em;
+    }
+
+    .benefit-copy p{
+      margin:0;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.6;
+    }
+
+    .how-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .how-visual{
+      position:relative;
+      min-height:460px;
+      background:linear-gradient(180deg,#eef3fa,#fff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:10px;
+    }
+
+    .how-visual img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+      background:#eef3fa;
+    }
+
+    .how-steps{
+      padding:34px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .steps-list{display:grid;gap:18px}
+
+    .step{
+      display:grid;
+      grid-template-columns:58px 1fr;
+      gap:16px;
+      padding:18px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:linear-gradient(180deg,#ffffff,#f8fafd);
+    }
+
+    .step-num{
+      width:58px;
+      height:58px;
+      border-radius:20px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(180deg,var(--blue-2), #fff);
+      border:1px solid var(--line);
+      font-weight:800;
+      color:var(--navy);
+    }
+
+    .step h4{
+      margin:0 0 6px;
+      font-size:23px;
+      letter-spacing:-.03em;
+    }
+
+    .step p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .tiny-note{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .ingredients-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .ingredients-visual{
+      position:relative;
+      min-height:450px;
+      overflow:hidden;
+      background:#f3f6fb;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px;
+    }
+
+    .ingredients-visual img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+      background:#f3f6fb;
+    }
+
+    .ingredient-list{padding:30px}
+
+    .ingredient-list .item{
+      padding:18px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .ingredient-list .item:last-child{border-bottom:0}
+
+    .ingredient-list h4{
+      margin:0 0 8px;
+      font-size:21px;
+      letter-spacing:-.03em;
+    }
+
+    .ingredient-list p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .results-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
+
+    .stat-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+      padding:28px;
+      text-align:center;
+    }
+
+    .ring{
+      --value:90;
+      --accent: var(--navy);
+      width:132px;
+      height:132px;
+      margin:0 auto 16px;
+      border-radius:50%;
+      background:conic-gradient(var(--accent) calc(var(--value)*1%), #e6edf7 0);
+      display:grid;
+      place-items:center;
+      position:relative;
+    }
+
+    .ring::before{
+      content:"";
+      width:92px;
+      height:92px;
+      background:#fff;
+      border-radius:50%;
+      box-shadow:inset 0 0 0 1px var(--line);
+    }
+
+    .ring span{
+      position:absolute;
+      font-size:26px;
+      font-weight:800;
+      color:var(--navy);
+    }
+
+    .stat-card h4{
+      margin:0 0 8px;
+      font-size:22px;
+      letter-spacing:-.03em;
+    }
+
+    .stat-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+    }
+
+    .before-after{
+      display:grid;
+      grid-template-columns:1fr .95fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .ba-visual{
+      position:relative;
+      min-height:520px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#eef4fb,#fff);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .ba-visual img{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      object-position:center;
+      background:linear-gradient(180deg,#eef4fb,#fff);
+    }
+
+    .ba-visual .after{
+      clip-path: inset(0 0 0 50%);
+    }
+
+    .ba-slider{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      opacity:0;
+      cursor:ew-resize;
+    }
+
+    .ba-divider{
+      position:absolute;
+      top:0;
+      bottom:0;
+      left:50%;
+      width:2px;
+      background:rgba(255,255,255,.95);
+      box-shadow:0 0 0 1px rgba(16,24,32,.06);
+    }
+
+    .ba-handle{
+      position:absolute;
+      top:50%;
+      left:50%;
+      width:72px;
+      height:72px;
+      border-radius:50%;
+      transform:translate(-50%,-50%);
+      background:rgba(255,255,255,.9);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      display:grid;
+      place-items:center;
+      font-size:12px;
+      font-weight:800;
+      color:var(--navy);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .ba-label{
+      position:absolute;
+      top:22px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.88);
+      border:1px solid var(--line);
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--navy);
+      z-index:3;
+    }
+
+    .ba-label.left{left:22px}
+    .ba-label.right{right:22px}
+
+    .ba-copy{padding:34px}
+
+    .callout{
+      margin-top:24px;
+      padding:20px 22px;
+      border-radius:22px;
+      background:linear-gradient(180deg,var(--blue-2), #fff);
+      border:1px solid var(--line);
+    }
+
+    .callout b{
+      display:block;
+      margin-bottom:8px;
+      font-size:14px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .routine-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .routine-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:22px;
+      box-shadow:var(--shadow);
+      text-align:center;
+    }
+
+    .routine-card .index{
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      background:var(--blue-2);
+      display:grid;
+      place-items:center;
+      font-weight:800;
+      margin:0 auto 16px;
+    }
+
+    .routine-card img{
+      height:150px;
+      width:100%;
+      object-fit:contain;
+      object-position:center;
+      margin:0 auto 18px;
+    }
+
+    .routine-card h4{
+      margin:0 0 8px;
+      font-size:20px;
+      letter-spacing:-.03em;
+    }
+
+    .routine-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+      font-size:14px;
+    }
+
+    .sustain-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .s-card{
+      padding:24px;
+      border-radius:24px;
+      background:#fff;
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .s-card .icon-dot{margin-bottom:14px}
+
+    .s-card h4{
+      margin:0 0 8px;
+      font-size:20px;
+      letter-spacing:-.03em;
+    }
+
+    .s-card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .footer{
+      padding:38px 0 60px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media (max-width:1120px){
+      .product-grid,.how-grid,.ingredients-grid,.before-after{
+        grid-template-columns:1fr;
+      }
+
+      .product-info{
+        position:static;
+      }
+
+      .benefit-grid,.results-grid,.routine-row,.sustain-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width:720px){
+      .nav{display:none}
+      .container{width:min(var(--max),calc(100% - 20px))}
+      .hero-wrap{padding-top:18px}
+      .strip-grid,.meta-bar,.icon-grid,.benefit-grid,.results-grid,.routine-row,.sustain-grid{
+        grid-template-columns:1fr;
+      }
+      .product-info,.ba-copy,.ingredient-list,.how-steps{
+        padding:22px;
+      }
+      .how-visual,.ba-visual,.ingredients-visual{
+        min-height:360px;
+      }
+      .step{
+        grid-template-columns:1fr;
+      }
+      .step-num{
+        width:52px;
+        height:52px;
+      }
+      .g-card.g-wide-top{min-height:160px}
+      .g-card.g-wide-bottom{min-height:220px}
+      .g-card{min-height:180px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top">
+        <img src="https://drive.google.com/thumbnail?id=14NFlW_eXIRYt-iEfGMEh1s4Q78hX56d5&sz=w1200" alt="Kamedis logo" />
+      </a>
+      <nav class="nav">
+        <a href="#overview">Overview</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#how-to-use">How to Use</a>
+        <a href="#results">Results</a>
+        <a href="#ingredients">Ingredients</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero-wrap" id="overview">
+      <div class="container product-grid">
+        <div class="gallery-col">
+          <div class="gallery-main">
+            <div class="panel reference-gallery-wrap">
+              <div class="reference-gallery">
+                <div class="g-card g-wide-top">
+                  <img src="https://drive.google.com/thumbnail?id=105kinKA942tjtb5QmrGo2iPxmfjPEIjD&sz=w2200" alt="Product image top">
+                </div>
+                <div class="g-card">
+                  <img src="https://drive.google.com/thumbnail?id=12anIS2mJ9-4pwkiobZCib7C9INZuphFp&sz=w1600" alt="Product image left">
+                </div>
+                <div class="g-card">
+                  <img src="https://drive.google.com/thumbnail?id=1P966EjNRFIuVlvfxYhecND0zGSemqBQ7&sz=w1600" alt="Product image right">
+                </div>
+                <div class="g-card g-wide-bottom">
+                  <img src="https://drive.google.com/thumbnail?id=1UV8eHkBpT7UydG-Re5J7ZeTUzTGUq4XG&sz=w2200" alt="Texture image">
+                </div>
+              </div>
+            </div>
+
+            <div class="strip-grid">
+              <div class="panel strip-card">
+                <img src="https://drive.google.com/thumbnail?id=1LhaQ_7VKgyXJc-6_i7OCGNNsmTru28iI&sz=w1600" alt="Campaign banner">
+              </div>
+              <div class="panel strip-card">
+                <img src="https://drive.google.com/thumbnail?id=1yqf5QzronYdATC3HH10KVNBgvEANjjmW&sz=w1600" alt="How to use visual">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel product-info">
+          <div class="eyebrow">Clinically proven eczema care</div>
+          <h1>Kamedis Calm<br>Eczema Therapy Cream</h1>
+          <p class="subtitle">A clinically proven eczema relief cream designed to calm itch, dryness and irritation while restoring the skin barrier with a soft, non-greasy finish for sensitive skin.</p>
+
+          <div class="meta-bar">
+            <div class="meta-chip">
+              <b>Size</b>
+              <span>5.07 Fl. Oz. (150ml)</span>
+            </div>
+            <div class="meta-chip">
+              <b>Use</b>
+              <span>Face &amp; body, day and night</span>
+            </div>
+          </div>
+
+          <div class="icon-grid">
+            <div class="icon-card">
+              <div class="icon-dot">24</div>
+              <div>
+                <b>Day &amp; Night</b>
+                <span>Use morning and evening or as needed on irritated skin.</span>
+              </div>
+            </div>
+
+            <div class="icon-card">
+              <div class="icon-dot">Fx</div>
+              <div>
+                <b>Face &amp; Body</b>
+                <span>Suitable for dry, red and irritated areas across the body.</span>
+              </div>
+            </div>
+
+            <div class="icon-card">
+              <div class="icon-dot">Rx</div>
+              <div>
+                <b>Dermatologist Recommended</b>
+                <span>Steroid-free, fragrance-free and gentle enough for long-term use.</span>
+              </div>
+            </div>
+
+            <div class="icon-card">
+              <div class="icon-dot">Bk</div>
+              <div>
+                <b>Barrier Repair</b>
+                <span>Deep moisture support with ceramides, glycerin and shea butter.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#how-to-use">Explore how to use</a>
+            <a class="btn btn-secondary" href="#ingredients">See ingredients</a>
+          </div>
+
+          <div class="accordion">
+            <div class="acc-item open">
+              <button class="acc-trigger"><span>Indications</span><span>+</span></button>
+              <div class="acc-panel" style="max-height: 320px;">
+                <div class="acc-inner">
+                  Clinically proven effective for eczema-prone, dry, red and irritated skin. Suitable for adults, children and babies, with visible relief from itch, dryness and flare-up discomfort in as little as 2 weeks.
+                </div>
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-trigger"><span>Characteristics</span><span>+</span></button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  <ul>
+                    <li>Dermatologist-recommended and suitable for long-term use.</li>
+                    <li>Steroid-free, fragrance-free and non-greasy.</li>
+                    <li>Formulated without parabens, SLS, cortisone, alcohol, dyes or harsh additives.</li>
+                    <li>Easily absorbed and appropriate for both face and body.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-trigger"><span>Composition</span><span>+</span></button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  Powered by patented <strong>BOTANIPLEX® Calm 6</strong> together with ceramides, glycerin, cholesterol and shea butter to calm redness, support the skin microbiome, strengthen the skin barrier and prevent moisture loss.
+                </div>
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-trigger"><span>Warnings</span><span>+</span></button>
+              <div class="acc-panel">
+                <div class="acc-inner">
+                  For external use only. Apply to clean skin. Use twice a day or as needed on dry, red and irritated skin. For babies and children up to 3 years, apply once a day. Individual results may vary and are not guaranteed.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="hero-copy">
+          <div class="eyebrow">Clinically proven eczema relief</div>
+          <h2 class="section-title">Calm visible flare-ups with deep barrier support.</h2>
+          <p class="section-sub">Designed with a clean dermatology aesthetic and built around long-term comfort for sensitive, eczema-prone skin.</p>
+        </div>
+
+        <div class="full-banner panel">
+          <img src="https://drive.google.com/thumbnail?id=1LhaQ_7VKgyXJc-6_i7OCGNNsmTru28iI&sz=w2200" alt="Kamedis hero banner">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <div class="container">
+        <h2 class="section-title">How it supports your skin</h2>
+        <p class="section-sub">Built in the same premium, medical-beauty style you liked, with text outside the imagery and a clean Kamedis blue and white palette.</p>
+
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <div class="media">
+              <img src="https://drive.google.com/thumbnail?id=1P966EjNRFIuVlvfxYhecND0zGSemqBQ7&sz=w1400" alt="Benefit image 1">
+            </div>
+            <div class="benefit-copy">
+              <h3>Soothes irritation</h3>
+              <p>Helps calm itch, redness and visible dryness with a gentle, dermatologist-led approach.</p>
+            </div>
+          </article>
+
+          <article class="benefit-card">
+            <div class="media">
+              <img src="https://drive.google.com/thumbnail?id=1UV8eHkBpT7UydG-Re5J7ZeTUzTGUq4XG&sz=w1400" alt="Benefit image 2">
+            </div>
+            <div class="benefit-copy">
+              <h3>Repairs barrier</h3>
+              <p>Supports the skin’s natural defense with ceramides, cholesterol and moisture-locking care.</p>
+            </div>
+          </article>
+
+          <article class="benefit-card">
+            <div class="media">
+              <img src="https://drive.google.com/thumbnail?id=1Ubc27OIYrlgd0MTutd-gDASixEGsOG6j&sz=w1400" alt="Benefit image 3">
+            </div>
+            <div class="benefit-copy">
+              <h3>Deep moisture relief</h3>
+              <p>Absorbs easily, hydrates deeply and helps protect skin from everyday external irritants.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="how-to-use">
+      <div class="container how-grid">
+        <div class="panel how-visual">
+          <img src="https://cdn.shopify.com/s/files/1/0955/7891/5183/files/14-htu.png?v=1773213698" alt="How to use background image">
+        </div>
+
+        <div class="panel how-steps">
+          <div class="eyebrow">How to use</div>
+          <h2 class="section-title" style="margin-top:0">Simple daily comfort for irritated skin</h2>
+          <p class="section-sub">Use the provided how-to-use artwork as the visual foundation, then pair it with clear steps and icons on the right.</p>
+
+          <div class="steps-list">
+            <div class="step">
+              <div class="step-num">01</div>
+              <div>
+                <h4>Apply to clean skin</h4>
+                <p>Start with freshly cleansed skin so the formula can sit comfortably on the areas that need support most.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">02</div>
+              <div>
+                <h4>Use twice a day</h4>
+                <p>Apply morning and evening, or as needed, on dry, red and irritated skin for ongoing relief.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-num">03</div>
+              <div>
+                <h4>Adjust for little ones</h4>
+                <p>For babies and children up to 3 years, apply once a day. Keep the routine simple and consistent.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="tiny-note">* Individual results may vary and are not guaranteed.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="results">
+      <div class="container">
+        <h2 class="section-title">Clinically proven relief</h2>
+        <p class="section-sub">A dynamic results strip inspired by the reference style, adapted to your eczema therapy messaging.</p>
+
+        <div class="results-grid">
+          <div class="stat-card">
+            <div class="ring" style="--value:90;"><span>90%</span></div>
+            <h4>Visible itch relief</h4>
+            <p>Supports calmer skin comfort and helps reduce the urge to scratch.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="ring" style="--value:92;"><span>92%</span></div>
+            <h4>Barrier support</h4>
+            <p>Helps protect skin from dryness and external irritation through consistent use.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="ring" style="--value:88;"><span>88%</span></div>
+            <h4>Moisture retention</h4>
+            <p>Delivers long-lasting comfort with a non-greasy finish that absorbs easily.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container before-after">
+        <div class="panel ba-visual">
+          <img src="https://drive.google.com/thumbnail?id=1skc3zA6VBHZW3U8GPiMWuA1oVFAq3-PV&sz=w2200" alt="Before skin">
+          <img class="after" id="afterImage" src="https://drive.google.com/thumbnail?id=1Z9jVBiM5apytxcKAQP3nHLrtj9SfbwGI&sz=w2200" alt="After skin">
+          <div class="ba-label left">Before</div>
+          <div class="ba-label right">After</div>
+          <div class="ba-divider" id="baDivider"></div>
+          <div class="ba-handle" id="baHandle">Drag</div>
+          <input class="ba-slider" id="baSlider" type="range" min="0" max="100" value="50" aria-label="Before and after comparison slider">
+        </div>
+
+        <div class="panel ba-copy">
+          <div class="eyebrow">Before &amp; after</div>
+          <h2 class="section-title" style="margin-top:0">See the page behave like a premium product detail experience</h2>
+          <p class="section-sub">This section mirrors the interactive comparison feel of your reference direction while staying inside the Kamedis brand palette.</p>
+
+          <div class="callout">
+            <b>Complete product content</b>
+            Clinically proven eczema relief. Dermatologist-recommended. Powered by patented BOTANIPLEX® Calm 6. Formulated without common irritants. Deep moisture and barrier repair with ceramides, glycerin, cholesterol and shea butter.
+          </div>
+
+          <div class="callout" style="margin-top:16px; background:linear-gradient(180deg,#fff,#f7f9fd)">
+            <b>Clean formulation highlights</b>
+            Free from parabens, SLS, cortisone, steroids, alcohol, dyes, fragrance and harsh additives. Suitable for face and body with an easily absorbed, non-greasy feel.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ingredients">
+      <div class="container ingredients-grid">
+        <div class="panel ingredients-visual">
+          <img src="https://drive.google.com/thumbnail?id=1Y8o_avax7JkmRYkbXtaYCOOv5ozRvSrQ&sz=w2200" alt="Key ingredients visual">
+        </div>
+
+        <div class="panel ingredient-list">
+          <div class="eyebrow">Composition</div>
+          <h2 class="section-title" style="margin-top:0">Key ingredients + texture story</h2>
+          <p class="section-sub">Inspired by the ingredient and texture split from the reference page, translated into a softer pharmaceutical eczema-care presentation.</p>
+
+          <div class="item">
+            <h4>Patented BOTANIPLEX® Calm 6</h4>
+            <p>A proprietary botanical complex with benefits that calm redness, soothe itch and support the skin microbiome while strengthening the skin’s natural barrier.</p>
+          </div>
+
+          <div class="item">
+            <h4>Ceramides + Cholesterol</h4>
+            <p>Work together to fortify the barrier and help shield skin from dryness, pollution and environmental stress.</p>
+          </div>
+
+          <div class="item">
+            <h4>Glycerin + Shea Butter</h4>
+            <p>Deliver deep hydration, prevent moisture loss and maintain a comfortable, non-greasy finish across face and body.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Add it to your skincare routine</h2>
+        <p class="section-sub">A routine section in the same spirit as the reference site, with your cream placed as the hero treatment step.</p>
+
+        <div class="routine-row">
+          <div class="routine-card">
+            <div class="index">1</div>
+            <img src="https://drive.google.com/thumbnail?id=12anIS2mJ9-4pwkiobZCib7C9INZuphFp&sz=w1200" alt="Step 1">
+            <h4>Cleanse</h4>
+            <p>Use a gentle cleanser and pat skin dry without rubbing.</p>
+          </div>
+
+          <div class="routine-card">
+            <div class="index">2</div>
+            <img src="https://drive.google.com/thumbnail?id=105kinKA942tjtb5QmrGo2iPxmfjPEIjD&sz=w1200" alt="Step 2">
+            <h4>Treat</h4>
+            <p>Apply Calm Eczema Therapy Cream to the areas that need barrier support.</p>
+          </div>
+
+          <div class="routine-card">
+            <div class="index">3</div>
+            <img src="https://drive.google.com/thumbnail?id=1_ZWypbpKmCTS2y3L_SnQzmZ4LZDyOwRz&sz=w1200" alt="Step 3">
+            <h4>Relieve</h4>
+            <p>Reapply as needed throughout the day when skin feels dry or irritated.</p>
+          </div>
+
+          <div class="routine-card">
+            <div class="index">4</div>
+            <img src="https://drive.google.com/thumbnail?id=1xPvPIBxpl0nHYJWJrYrtjtZ6JmWCbtYJ&sz=w1200" alt="Step 4">
+            <h4>Maintain</h4>
+            <p>Keep the routine consistent to support comfort and long-term skin resilience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Sustainability + formulation principles</h2>
+        <p class="section-sub">A clean closing section to mirror the lower informational blocks on the reference page.</p>
+
+        <div class="sustain-grid">
+          <div class="s-card">
+            <div class="icon-dot">Ø</div>
+            <h4>Fragrance free</h4>
+            <p>Made without added fragrance to help respect sensitive, eczema-prone skin.</p>
+          </div>
+
+          <div class="s-card">
+            <div class="icon-dot">S</div>
+            <h4>Steroid free</h4>
+            <p>Gentle enough for long-term use and built for visible comfort without steroids.</p>
+          </div>
+
+          <div class="s-card">
+            <div class="icon-dot">P</div>
+            <h4>Paraben free</h4>
+            <p>Formulated without common irritants including parabens, dyes and harsh additives.</p>
+          </div>
+
+          <div class="s-card">
+            <div class="icon-dot">B</div>
+            <h4>Barrier focused</h4>
+            <p>Supports hydration, barrier repair and day-to-day protection from dryness and pollution.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      Prototype product detail page built in HTML/CSS/JS with Google Drive image references. If any shared Drive asset does not render in your environment, replace that image source with a direct hosted file URL or uploaded media path.
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.acc-item').forEach(item => {
+      const trigger = item.querySelector('.acc-trigger');
+      const panel = item.querySelector('.acc-panel');
+
+      trigger.addEventListener('click', () => {
+        const open = item.classList.contains('open');
+
+        document.querySelectorAll('.acc-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.acc-panel').style.maxHeight = null;
+        });
+
+        if (!open) {
+          item.classList.add('open');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+        }
+      });
+    });
+
+    const slider = document.getElementById('baSlider');
+    const afterImage = document.getElementById('afterImage');
+    const divider = document.getElementById('baDivider');
+    const handle = document.getElementById('baHandle');
+
+    const syncBeforeAfter = () => {
+      const value = slider.value;
+      afterImage.style.clipPath = `inset(0 0 0 ${value}%)`;
+      divider.style.left = value + '%';
+      handle.style.left = value + '%';
+    };
+
+    slider.addEventListener('input', syncBeforeAfter);
+    syncBeforeAfter();
+  </script>
+</body>
+</html>
+```
